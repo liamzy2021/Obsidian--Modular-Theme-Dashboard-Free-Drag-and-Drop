@@ -2,7 +2,7 @@
 
 > A feature-rich free-layout dashboard plugin with 10 widgets, 8 beautiful themes, and unlimited module instancing support.
 
-**V15** — Combines V14's free drag-and-drop layout architecture with V11's full feature set, with all modules supporting unlimited instancing.
+**V16** — Combines V14's free drag-and-drop layout architecture with V11's full feature set, with all modules supporting unlimited instancing.
 
 ---
 
@@ -249,7 +249,7 @@ MIT
 
 > 一款功能丰富的自由拖拽仪表盘插件，提供 10 个功能模块、8 款精美主题，以及无限实例化能力。
 
-**V15** — 融合 V14 自由拖拽布局架构与 V11 全量功能模块，所有模块均支持无限实例化。
+**V16** — 融合 V14 自由拖拽布局架构与 V11 全量功能模块，所有模块均支持无限实例化。
 
 ---
 

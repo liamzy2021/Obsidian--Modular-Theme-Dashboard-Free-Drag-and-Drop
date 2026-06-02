@@ -1,5 +1,5 @@
 /**
- * AI Dashboard V15
+ * AI Dashboard V16
  * 底层：V14 自由拖拽/resize 布局 + 完全模块化架构
  * 功能：V11 完整功能迁移 + 无限实例化系统（所有模块默认可克隆）
  * 主题：V11 8个精美主题
@@ -182,7 +182,7 @@ class ModuleManager {
         try {
             files = await this.plugin.app.vault.adapter.list(modulesDir);
         } catch (e) {
-            console.warn('[V15] 扫描模块目录失败:', e);
+            console.warn('[V16] 扫描模块目录失败:', e);
             return;
         }
 
@@ -202,11 +202,11 @@ class ModuleManager {
                     }
                 }
             } catch (e) {
-                console.warn('[V15] 模块 ' + moduleId + ' 加载失败:', e);
+                console.warn('[V16] 模块 ' + moduleId + ' 加载失败:', e);
             }
         }
 
-        console.log('[V15] 已加载模块: ' + [...this.modules.keys()].join(', '));
+        console.log('[V16] 已加载模块: ' + [...this.modules.keys()].join(', '));
     }
 
     getLoadedModuleIds() {
@@ -278,7 +278,7 @@ class ModuleManager {
             }
             return exports;
         } catch (e) {
-            console.error('[V15] 模块解析错误 (' + fallbackId + '):', e);
+            console.error('[V16] 模块解析错误 (' + fallbackId + '):', e);
             return null;
         }
     }
@@ -353,7 +353,7 @@ class ModuleManager {
         try {
             await mod.render(container);
         } catch (e) {
-            console.error('[V15] 模块 ' + moduleId + ' 渲染错误:', e);
+            console.error('[V16] 模块 ' + moduleId + ' 渲染错误:', e);
             container.createEl('div', {
                 text: '渲染失败: ' + e.message,
                 attr: { style: 'color: var(--text-muted); font-size: 12px; padding: 10px;' }
@@ -547,7 +547,7 @@ class DashboardView extends ItemView {
             try {
                 this.plugin.app.setting.open();
             } catch (e) {
-                console.warn('[V15] 打开设置失败:', e);
+                console.warn('[V16] 打开设置失败:', e);
             }
         });
     }
@@ -891,7 +891,7 @@ class DashboardSettingTab extends PluginSettingTab {
         const { containerEl } = this;
         containerEl.empty();
 
-        containerEl.createEl('h2', { text: 'Modular Theme Dashboard V15 设置' });
+        containerEl.createEl('h2', { text: 'Modular Theme Dashboard V16 设置' });
 
         this._renderAppearanceSettings(containerEl);
         this._renderModuleToggles(containerEl);
@@ -1090,7 +1090,7 @@ class DashboardSettingTab extends PluginSettingTab {
         try {
             mod.renderSettings(wrapper, this.plugin, saveCallback);
         } catch (e) {
-            console.error('[V15] 模块 ' + moduleId + ' 设置渲染失败:', e);
+            console.error('[V16] 模块 ' + moduleId + ' 设置渲染失败:', e);
             wrapper.createEl('p', { text: '设置加载失败: ' + e.message, attr: { style: 'color: var(--text-muted);' } });
         }
     }
@@ -1128,14 +1128,14 @@ class DashboardSettingTab extends PluginSettingTab {
             for (const p of candidates) {
                 if (p && fs.existsSync(p)) { foundPath = p; break; }
             }
-            console.log('[V15 Donate] 找到路径:', foundPath || '未找到', '候选:', candidates);
+            console.log('[V16 Donate] 找到路径:', foundPath || '未找到', '候选:', candidates);
 
             if (foundPath) {
                 const buf = fs.readFileSync(foundPath);
                 qrSrc = 'data:image/png;base64,' + buf.toString('base64');
             }
         } catch (e) {
-            console.error('[V15] 加载打赏二维码失败:', e);
+            console.error('[V16] 加载打赏二维码失败:', e);
         }
 
         const qrWrap = section.createDiv({
