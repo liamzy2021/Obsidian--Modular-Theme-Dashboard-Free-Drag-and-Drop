@@ -928,3 +928,274 @@
     margin-top: 10px;
     text-align: right;
 }
+
+/* =====================================================
+   自动播放模块 (autoplay-loop)
+   ===================================================== */
+.autoplay-panel { padding: 12px 14px; }
+.autoplay-panel-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 10px; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 6px; }
+.autoplay-section { margin-bottom: 10px; }
+.autoplay-section h4 { font-size: 11px; color: var(--text-muted); margin: 0 0 6px; }
+.autoplay-toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 4px 8px; font-size: 12px; border-radius: 4px; transition: background 0.1s; }
+.autoplay-toggle-row:hover { background: var(--background-modifier-hover); }
+.autoplay-toggle-label { color: var(--text-normal); }
+.autoplay-toggle-status { font-size: 11px; font-weight: 600; }
+.autoplay-toggle-status.on { color: #4caf50; }
+.autoplay-toggle-status.off { color: var(--text-muted); }
+
+/* =====================================================
+   代码编辑器模块 (code-editor)
+   ===================================================== */
+.code-editor-panel { padding: 12px 14px; display: flex; flex-direction: column; height: 100%; }
+.code-editor-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 8px; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 6px; }
+.code-editor-row { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; font-size: 12px; }
+.code-editor-label { color: var(--text-normal); }
+.code-editor-value { color: var(--text-muted); font-size: 11px; }
+.code-editor-file-list { max-height: 180px; overflow-y: auto; margin-top: 8px; }
+.code-editor-file-item { display: flex; align-items: center; justify-content: space-between; padding: 5px 8px; border-radius: 4px; cursor: pointer; transition: background 0.1s; font-size: 12px; }
+.code-editor-file-item:hover { background: var(--background-modifier-hover); }
+.code-editor-file-name { color: var(--text-normal); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.code-editor-file-ext { color: var(--text-muted); font-size: 10px; flex-shrink: 0; margin-left: 8px; }
+.code-editor-empty { text-align: center; color: var(--text-muted); padding: 20px; font-size: 12px; }
+
+/* =====================================================
+   数据文件编辑器模块 (data-editor)
+   ===================================================== */
+.data-editor-panel { padding: 12px 14px; display: flex; flex-direction: column; height: 100%; }
+.data-editor-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 8px; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 6px; }
+.data-editor-section { margin-bottom: 8px; padding: 8px; background: var(--background-modifier-form-field); border-radius: 6px; }
+.data-editor-section h4 { font-size: 11px; color: var(--text-muted); margin: 0 0 4px; }
+.data-editor-row { display: flex; align-items: center; justify-content: space-between; padding: 3px 0; font-size: 11px; }
+.data-editor-ext-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+.data-editor-ext-tag { padding: 2px 8px; border-radius: 10px; font-size: 10px; background: var(--background-modifier-form-field); color: var(--text-muted); }
+
+/* =====================================================
+   文档查看器模块 (doc-viewer)
+   ===================================================== */
+.doc-viewer-panel { padding: 12px 14px; display: flex; flex-direction: column; height: 100%; }
+.doc-viewer-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 8px; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 6px; }
+.doc-viewer-section { margin-bottom: 10px; padding: 8px; background: var(--background-modifier-form-field); border-radius: 6px; }
+.doc-viewer-section h4 { font-size: 11px; color: var(--text-muted); margin: 0 0 6px; }
+.doc-viewer-row { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; font-size: 12px; }
+.doc-viewer-label { color: var(--text-normal); }
+.doc-viewer-value { color: var(--text-muted); font-size: 11px; }
+.doc-viewer-list { max-height: 150px; overflow-y: auto; margin-top: 8px; }
+.doc-viewer-file { display: flex; align-items: center; justify-content: space-between; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; }
+.doc-viewer-file:hover { background: var(--background-modifier-hover); }
+
+/* =====================================================
+   Excel转Markdown模块 (excel-to-markdown)
+   ===================================================== */
+.excel-md-panel { padding: 12px 14px; display: flex; flex-direction: column; height: 100%; }
+.excel-md-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 10px; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 6px; }
+.excel-md-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
+.excel-md-dropzone {
+    flex: 1; border: 2px dashed var(--background-modifier-border);
+    border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; color: var(--text-muted); font-size: 12px; cursor: pointer;
+    transition: border-color 0.15s, background 0.15s; min-height: 120px;
+}
+.excel-md-dropzone:hover { border-color: var(--v6-primary); background: var(--background-modifier-hover); }
+.excel-md-dropzone.drag-over { border-color: var(--v6-primary); background: rgba(var(--v6-primary-rgb, 232,149,109), 0.05); }
+.excel-md-drop-icon { font-size: 32px; }
+.excel-md-output { margin-top: 10px; padding: 10px; background: var(--background-modifier-form-field); border-radius: 6px; font-size: 11px; max-height: 160px; overflow-y: auto; }
+.excel-md-output pre { margin: 0; font-family: var(--font-monospace); font-size: 11px; white-space: pre-wrap; word-break: break-all; }
+
+/* =====================================================
+   文件夹统计模块 (folder-counter)
+   ===================================================== */
+.folder-counter-panel { padding: 12px 14px; display: flex; flex-direction: column; height: 100%; }
+.folder-counter-header { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--background-modifier-border); }
+.folder-counter-list { flex: 1; overflow-y: auto; font-size: 12px; }
+.folder-counter-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; border-radius: 4px; cursor: pointer; transition: background 0.1s; }
+.folder-counter-item:hover { background: var(--background-modifier-hover); }
+.folder-counter-name { color: var(--text-normal); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.folder-counter-count { color: var(--text-muted); font-weight: 600; background: var(--background-modifier-form-field); padding: 1px 8px; border-radius: 10px; font-size: 11px; flex-shrink: 0; margin-left: 8px; }
+.folder-counter-empty { text-align: center; color: var(--text-muted); padding: 20px; font-size: 12px; }
+
+/* =====================================================
+   HTML查看器模块 (html-viewer)
+   ===================================================== */
+.htmlv-container { padding: 12px; height: 100%; overflow: auto; }
+.htmlv-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.htmlv-count { font-size: 12px; color: var(--text-muted); }
+.htmlv-select { padding: 4px 8px; border: 1px solid var(--background-modifier-border); border-radius: 4px; background: var(--background-secondary); color: var(--text-normal); font-size: 11px; }
+.htmlv-list { display: flex; flex-direction: column; gap: 4px; }
+.htmlv-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 6px; cursor: pointer; transition: background 0.1s; }
+.htmlv-item:hover { background: var(--background-modifier-hover); }
+.htmlv-name { font-size: 12px; color: var(--text-normal); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.htmlv-size { font-size: 10px; color: var(--text-muted); flex-shrink: 0; margin-left: 8px; }
+.htmlv-empty { text-align: center; color: var(--text-muted); padding: 30px 20px; font-size: 13px; }
+
+/* =====================================================
+   图片画廊模块 (image-gallery)
+   ===================================================== */
+.ig-container { padding: 12px; height: 100%; overflow: auto; }
+.ig-toolbar { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.ig-toolbar select, .ig-toolbar input { padding: 4px 8px; border: 1px solid var(--background-modifier-border); border-radius: 4px; background: var(--background-secondary); color: var(--text-normal); font-size: 11px; }
+.ig-grid { display: grid; gap: 6px; }
+.ig-thumb { aspect-ratio: 1; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s; background: var(--background-modifier-form-field); }
+.ig-thumb:hover { border-color: var(--v6-primary); }
+.ig-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.ig-empty { text-align: center; color: var(--text-muted); padding: 30px 20px; font-size: 13px; }
+
+/* =====================================================
+   图片处理模块 (image-tools)
+   ===================================================== */
+.image-tools-panel { padding: 12px 14px; }
+.image-tools-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 8px; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 6px; }
+.image-tools-row { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; font-size: 12px; }
+.image-tools-label { color: var(--text-normal); }
+.image-tools-value { color: var(--text-muted); font-size: 11px; }
+.image-tools-section { margin-top: 10px; padding: 8px; background: var(--background-modifier-form-field); border-radius: 6px; }
+.image-tools-list { max-height: 150px; overflow-y: auto; }
+.image-tools-file { display: flex; align-items: center; justify-content: space-between; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; }
+.image-tools-file:hover { background: var(--background-modifier-hover); }
+
+/* =====================================================
+   媒体画廊模块 (media-gallery)
+   ===================================================== */
+.media-gallery-panel { padding: 12px 14px; display: flex; flex-direction: column; height: 100%; }
+.media-gallery-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--background-modifier-border); }
+.media-gallery-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); }
+.media-gallery-stats { font-size: 10px; color: var(--text-muted); margin-top: 4px; display: flex; gap: 12px; }
+.media-gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 6px; flex: 1; overflow-y: auto; }
+.media-gallery-thumb { aspect-ratio: 1; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s; background: var(--background-modifier-form-field); display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.media-gallery-thumb:hover { border-color: var(--v6-primary); }
+.media-gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.media-gallery-empty { text-align: center; color: var(--text-muted); padding: 30px 20px; font-size: 13px; flex: 1; display: flex; align-items: center; justify-content: center; }
+
+/* =====================================================
+   电子表格模块 (spreadsheet)
+   ===================================================== */
+.spreadsheet-panel { padding: 12px 14px; display: flex; flex-direction: column; height: 100%; }
+.spreadsheet-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 8px; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 6px; }
+.spreadsheet-section { margin-bottom: 10px; padding: 8px; background: var(--background-modifier-form-field); border-radius: 6px; }
+.spreadsheet-section h4 { font-size: 11px; color: var(--text-muted); margin: 0 0 6px; }
+.spreadsheet-row { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; font-size: 12px; }
+.spreadsheet-label { color: var(--text-normal); }
+.spreadsheet-value { color: var(--text-muted); font-size: 11px; }
+.spreadsheet-list { max-height: 180px; overflow-y: auto; }
+.spreadsheet-file { display: flex; align-items: center; justify-content: space-between; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; }
+.spreadsheet-file:hover { background: var(--background-modifier-hover); }
+
+/* =====================================================
+   系统托盘模块 (system-tray)
+   ===================================================== */
+.tray-container { padding: 14px; height: 100%; overflow: auto; }
+.tray-card { background: var(--background-modifier-form-field); border-radius: 8px; padding: 14px; margin-bottom: 12px; }
+.tray-card-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 8px; }
+.tray-toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; font-size: 12px; }
+.tray-toggle-label { color: var(--text-normal); }
+.tray-status { font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 10px; }
+.tray-status.active { background: rgba(76, 175, 80, 0.15); color: #4caf50; }
+.tray-status.inactive { background: var(--background-modifier-form-field); color: var(--text-muted); }
+.tray-note { margin-top: 10px; font-size: 10px; color: var(--text-faint); line-height: 1.5; }
+
+/* =====================================================
+   表格列宽模块 (table-resize)
+   ===================================================== */
+.table-resize-panel { padding: 12px 14px; }
+.table-resize-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); margin-bottom: 10px; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 6px; }
+.table-resize-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; font-size: 12px; }
+.table-resize-label { color: var(--text-normal); }
+.table-resize-input { width: 60px; padding: 4px 8px; border: 1px solid var(--background-modifier-border); border-radius: 4px; background: var(--background-modifier-form-field); color: var(--text-normal); font-size: 12px; text-align: center; outline: none; }
+.table-resize-input:focus { border-color: var(--v6-primary); }
+.table-resize-status { margin-top: 10px; padding: 8px; background: var(--background-modifier-form-field); border-radius: 6px; font-size: 11px; color: var(--text-muted); }
+.table-resize-tip { margin-top: 8px; font-size: 10px; color: var(--text-faint); line-height: 1.5; }
+
+/* =====================================================
+   网址导航模块 (url-opener)
+   ===================================================== */
+.uo-container { padding: 12px; height: 100%; overflow: auto; display: flex; flex-direction: column; }
+.uo-inputbar { display: flex; gap: 8px; margin-bottom: 12px; }
+.uo-inputbar input { flex: 1; padding: 6px 10px; border: 1px solid var(--background-modifier-border); border-radius: 4px; background: var(--background-secondary); color: var(--text-normal); font-size: 12px; outline: none; }
+.uo-inputbar input:focus { border-color: var(--v6-primary); }
+.uo-btn { padding: 6px 12px; border: none; border-radius: 4px; background: var(--v6-primary); color: white; cursor: pointer; font-size: 12px; transition: opacity 0.15s; white-space: nowrap; }
+.uo-btn:hover { opacity: 0.85; }
+.uo-bookmarks-title { font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+.uo-bookmark { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--background-modifier-border); font-size: 12px; }
+.uo-bookmark:last-child { border-bottom: none; }
+.uo-bm-title { color: var(--text-normal); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+.uo-bm-title:hover { color: var(--v6-primary); }
+.uo-bm-url { color: var(--text-faint); font-size: 10px; margin-top: 1px; }
+.uo-bm-remove { color: var(--text-muted); cursor: pointer; padding: 2px 6px; font-size: 10px; opacity: 0; transition: opacity 0.15s; }
+.uo-bookmark:hover .uo-bm-remove { opacity: 1; }
+.uo-bm-remove:hover { color: var(--text-error); }
+.uo-empty { text-align: center; color: var(--text-muted); padding: 20px; font-size: 12px; }
+
+/* =====================================================
+   笔记统计模块 (vault-stats)
+   ===================================================== */
+.vault-stats-wrap { padding: 12px; }
+.vs-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.vs-title { font-size: 12px; font-weight: 600; color: var(--v6-primary); }
+.vs-time { font-size: 10px; color: var(--text-muted); }
+.vs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 10px; }
+.vs-item { text-align: center; padding: 10px 6px; background: var(--background-modifier-form-field); border-radius: 8px; transition: transform 0.15s; }
+.vs-item:hover { transform: translateY(-1px); }
+.vs-item-icon { font-size: 18px; margin-bottom: 4px; }
+.vs-item-value { font-size: 18px; font-weight: 700; color: var(--v6-primary); }
+.vs-item-label { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+.vs-top-title { font-size: 11px; font-weight: 600; color: var(--text-normal); margin-bottom: 6px; }
+.vs-top-list { max-height: 150px; overflow-y: auto; }
+.vs-top-item { display: flex; align-items: center; justify-content: space-between; padding: 5px 8px; border-radius: 4px; font-size: 11px; }
+.vs-top-item:hover { background: var(--background-modifier-hover); }
+.vs-top-name { color: var(--text-normal); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vs-top-count { color: var(--text-muted); font-weight: 600; flex-shrink: 0; margin-left: 8px; }
+
+/* =====================================================
+   小红书导入模块 (xhs-importer)
+   ===================================================== */
+.xhs-importer-wrap { padding: 12px; }
+.xhs-textarea { width: 100%; min-height: 80px; resize: vertical; border: 1px solid var(--background-modifier-border); border-radius: 6px; padding: 10px; font-size: 12px; background: var(--background-secondary); color: var(--text-normal); outline: none; font-family: inherit; box-sizing: border-box; }
+.xhs-textarea:focus { border-color: var(--v6-primary); }
+.xhs-actions { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
+.xhs-btn { padding: 6px 14px; border: none; border-radius: 6px; background: var(--v6-primary); color: white; cursor: pointer; font-size: 12px; transition: opacity 0.15s; }
+.xhs-btn:hover { opacity: 0.85; }
+.xhs-btn.secondary { background: var(--background-modifier-form-field); color: var(--text-normal); border: 1px solid var(--background-modifier-border); }
+.xhs-status { margin-top: 10px; font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+.xhs-status.success { color: #4caf50; }
+.xhs-status.error { color: var(--text-error); }
+.xhs-recent-title { font-size: 11px; font-weight: 600; color: var(--text-muted); margin-top: 16px; margin-bottom: 6px; }
+.xhs-recent-item { display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; transition: background 0.1s; }
+.xhs-recent-item:hover { background: var(--background-modifier-hover); }
+.xhs-recent-icon { font-size: 14px; }
+.xhs-recent-name { color: var(--text-normal); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.xhs-recent-time { color: var(--text-faint); font-size: 10px; flex-shrink: 0; }
+
+/* =====================================================
+   设置面板分类折叠
+   ===================================================== */
+.v15-category { margin-bottom: 4px; border: 1px solid var(--background-modifier-border); border-radius: 8px; overflow: hidden; }
+.v15-cat-header {
+    display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+    background: var(--background-secondary); cursor: pointer;
+    user-select: none; -webkit-user-select: none;
+    transition: background 0.15s; font-size: 13px; font-weight: 600;
+    color: var(--text-normal);
+}
+.v15-cat-header:hover { background: var(--background-modifier-hover); }
+.v15-cat-header .v15-cat-icon { font-size: 16px; flex-shrink: 0; }
+.v15-cat-header .v15-cat-label { flex: 1; }
+.v15-cat-header .v15-cat-arrow { font-size: 11px; color: var(--text-muted); transition: transform 0.2s; flex-shrink: 0; }
+.v15-cat-header .v15-cat-count { font-size: 10px; color: var(--text-faint); background: var(--background-modifier-form-field); padding: 1px 8px; border-radius: 10px; }
+.v15-category.open .v15-cat-arrow { transform: rotate(90deg); }
+.v15-cat-body { display: none; padding: 4px 8px 8px; background: var(--background-primary); }
+.v15-category.open .v15-cat-body { display: block; }
+.v15-cat-body .setting-item { border-top: 1px solid var(--background-modifier-border); border-bottom: none !important; padding: 8px 0; }
+.v15-cat-body .setting-item:first-child { border-top: none; }
+
+/* =====================================================
+   通用文件查看器视图 (FileViewerView)
+   ===================================================== */
+.file-viewer-binary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 40px;
+    text-align: center;
+    color: var(--text-normal);
+}
