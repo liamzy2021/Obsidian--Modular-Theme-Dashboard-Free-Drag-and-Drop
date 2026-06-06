@@ -126,6 +126,92 @@ Open files directly in the dashboard — no need to leave Obsidian:
 
 Toggle each format on/off in Settings. Disabled formats fall back to your system default app.
 
+### 🖼️ In-Note Code Block Galleries
+
+> Place ````t```` (image) or ````s```` (media) code blocks in any note to render a gallery in reading view. Right-click the block for layout, size, columns, and spacing controls.
+
+<p align="center">
+  <img width="1207" alt="Code Block Gallery" src="https://github.com/user-attachments/assets/5efa44a2-ccdc-41d4-9461-eed7d1b43525" />
+  <br/><em>📸 In-note gallery with spacing controls and smart center</em>
+</p>
+
+#### Image Gallery (```t)
+
+```markdown
+```t
+/path/to/images|horizontal|4|200|0|0|10|12|true
+```
+```
+
+**Quick format** (pipe-separated):
+
+| Position | Field | Default | Description |
+|----------|-------|---------|-------------|
+| 1 | `path` | — | Folder path (required) |
+| 2 | `layout` | `horizontal` | `horizontal` / `vertical` (waterfall) / `grid` |
+| 3 | `columns` | `4` | Images per row |
+| 4 | `height` | `200` | Image height in px |
+| 5 | `width` | `0` | Image width in px (0 = auto) |
+| 6 | `spacingLeft` | `0` | Left padding in px |
+| 7 | `spacingRight` | `0` | Right padding in px |
+| 8 | `itemGap` | `12` | Gap between images in px |
+| 9 | `smartCenter` | `false` | `true` for auto-centered flex layout |
+
+**Key-value format** (more readable):
+
+```
+path: /path/to/images
+type: horizontal
+columns: 4
+height: 200
+spacingleft: 10
+spacingright: 10
+itemgap: 12
+smartcenter: true
+```
+
+**Supported image formats:** jpeg, jpg, gif, png, webp, tiff, tif, avif, bmp
+
+**Right-click menu:** Edit / Delete / Custom Layout / Custom Size / Custom Columns / Spacing Settings (with Smart Center toggle)
+
+#### Media Gallery (``s)
+
+```markdown
+```s
+/path/to/media|grid|220|10|10|12|true
+```
+```
+
+**Quick format** (pipe-separated):
+
+| Position | Field | Default | Description |
+|----------|-------|---------|-------------|
+| 1 | `path` | — | Folder path (required) |
+| 2 | `type` | `grid` | `grid` / `list` / `full` (full-width) |
+| 3 | `size` | `220` | Media cell size in px |
+| 4 | `spacingLeft` | `0` | Left padding in px |
+| 5 | `spacingRight` | `0` | Right padding in px |
+| 6 | `itemGap` | `10` | Gap between items in px |
+| 7 | `smartCenter` | `false` | `true` for auto-centered flex layout |
+
+**Key-value format:**
+
+```
+path: /path/to/media1, /path/to/media2
+type: grid
+size: 220
+sort: name
+limit: 50
+spacingleft: 10
+spacingright: 10
+itemgap: 12
+smartcenter: true
+```
+
+**Supported media formats:** Images (jpeg, jpg, gif, png, webp, tiff, svg, ico, heic, avif, bmp) · Video (mp4, webm, ogg, mov, mkv, avi) · Audio (mp3, wav, flac, aac, m4a, ogg)
+
+**Right-click menu:** Edit / Delete / Custom Layout / Custom Size / Spacing Settings (with Smart Center toggle)
+
 ### 🎨 8 Beautiful Themes
 
 | Theme | Style |
@@ -223,12 +309,13 @@ MIT
 
 ## ☕ Support
 
-If you enjoy this plugin, a star on GitHub means the world:
+If you enjoy this plugin, you can support development:
 
 <p align="center">
-  <a href="https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop" target="_blank" rel="noopener">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="120" /><br/>
-    <img src="https://img.shields.io/badge/⭐-Star_on_GitHub-blue?style=for-the-badge&logo=github" />
+  <a href="https://ko-fi.com/liamzy" target="_blank" rel="noopener">
+    <img src="https://storage.ko-fi.com/cdn/brandasset/v2/kofi_symbol.png" alt="Ko-fi" width="80" />
+    <br/>
+    <b>☕ Buy me a coffee</b>
   </a>
 </p>
 
@@ -362,6 +449,92 @@ If you enjoy this plugin, a star on GitHub means the world:
 
 在设置中可按格式开关，禁用的格式自动回退到系统默认程序打开。
 
+### 🖼️ 笔记内代码块画廊
+
+> 在任意笔记中插入 ````t````（图片画廊）或 ````s````（媒体画廊）代码块，即可在阅读模式下渲染画廊。右键代码块可控制排版、大小、列数、间距等。
+
+<p align="center">
+  <img width="1207" alt="代码块画廊" src="https://github.com/user-attachments/assets/5efa44a2-ccdc-41d4-9461-eed7d1b43525" />
+  <br/><em>📸 笔记内画廊 — 间距控制 + 智能居中</em>
+</p>
+
+#### 图片画廊（```t）
+
+````markdown
+```t
+/path/to/images|horizontal|4|200|0|0|10|12|true
+```
+````
+
+**快速格式**（管道分隔）：
+
+| 位置 | 字段 | 默认值 | 说明 |
+|------|------|--------|------|
+| 1 | `path` | — | 图片文件夹路径（必填） |
+| 2 | `layout` | `horizontal` | `horizontal`（水平）/ `vertical`（瀑布流）/ `grid`（网格） |
+| 3 | `columns` | `4` | 每行图片数量 |
+| 4 | `height` | `200` | 图片高度（px） |
+| 5 | `width` | `0` | 图片宽度（px，0=自适应） |
+| 6 | `spacingLeft` | `0` | 左侧距离（px） |
+| 7 | `spacingRight` | `0` | 右侧距离（px） |
+| 8 | `itemGap` | `12` | 图片间距（px） |
+| 9 | `smartCenter` | `false` | `true` 启用智能居中 |
+
+**键值格式**（更易读）：
+
+```
+path: /path/to/images
+type: horizontal
+columns: 4
+height: 200
+spacingleft: 10
+spacingright: 10
+itemgap: 12
+smartcenter: true
+```
+
+**支持格式：** jpeg、jpg、gif、png、webp、tiff、tif、avif、bmp
+
+**右键菜单：** 编辑 / 删除 / 自定义排版 / 自定义大小 / 自定义每行数量 / 间距设置（含智能居中开关）
+
+#### 媒体画廊（```s）
+
+````markdown
+```s
+/path/to/media|grid|220|10|10|12|true
+```
+````
+
+**快速格式**（管道分隔）：
+
+| 位置 | 字段 | 默认值 | 说明 |
+|------|------|--------|------|
+| 1 | `path` | — | 媒体文件夹路径（必填） |
+| 2 | `type` | `grid` | `grid`（网格）/ `list`（列表）/ `full`（全宽） |
+| 3 | `size` | `220` | 媒体格子大小（px） |
+| 4 | `spacingLeft` | `0` | 左侧距离（px） |
+| 5 | `spacingRight` | `0` | 右侧距离（px） |
+| 6 | `itemGap` | `10` | 媒体间距（px） |
+| 7 | `smartCenter` | `false` | `true` 启用智能居中 |
+
+**键值格式：**
+
+```
+path: /path/to/media1, /path/to/media2
+type: grid
+size: 220
+sort: name
+limit: 50
+spacingleft: 10
+spacingright: 10
+itemgap: 12
+smartcenter: true
+```
+
+**支持格式：** 图片（jpeg、jpg、gif、png、webp、tiff、svg、ico、heic、avif、bmp）· 视频（mp4、webm、ogg、mov、mkv、avi）· 音频（mp3、wav、flac、aac、m4a、ogg）
+
+**右键菜单：** 编辑 / 删除 / 自定义排版 / 自定义大小 / 间距设置（含智能居中开关）
+
 ### 🎨 8 款精美主题
 
 | 主题 | 风格 |
@@ -463,6 +636,21 @@ MIT
 
 如果您觉得这个插件有帮助，欢迎打赏支持！
 
-<p align="center">
-  <img src="https://img-reg-ab.imagency.cn/e/19467f4b916c082ee6ef3b9d81aa9ecb.png" alt="微信打赏二维码" width="200" />
-</p>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="280">
+        <a href="https://ifdian.net/a/liamzy2021" target="_blank" rel="noopener">
+          <img src="https://static.afdiancdn.com/static/img/logo/logo.png" width="80" alt="爱发电 Afdian" />
+          <br/>
+          <b>❤️ 前往爱发电支持</b>
+        </a>
+      </td>
+      <td align="center" width="280">
+        <img src="https://img-reg-ab.imagency.cn/e/19467f4b916c082ee6ef3b9d81aa9ecb.png" width="200" alt="微信赞赏" />
+        <br/>
+        <b>微信赞赏</b>
+      </td>
+    </tr>
+  </table>
+</div>
