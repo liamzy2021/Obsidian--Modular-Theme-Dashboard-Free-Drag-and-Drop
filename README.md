@@ -309,27 +309,17 @@ MIT
 
 ## ☕ Support
 
-If you enjoy this plugin, you can support development:
+If you enjoy this plugin, you can buy me a coffee:
 
 <p align="center">
   <a href="https://ko-fi.com/liamzy" target="_blank" rel="noopener">
-    <img src="https://storage.ko-fi.com/cdn/brandasset/v2/kofi_symbol.png" alt="Ko-fi" width="80" />
-    <br/>
-    <b>☕ Buy me a coffee</b>
+    <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="36" alt="Buy Me a Coffee at ko-fi.com" />
   </a>
 </p>
 
 ---
 
 <a name="中文说明"></a>
-<p align="center">
-  <a href="#modular-theme-dashboard">English</a> &nbsp;|&nbsp;
-  <a href="#中文说明">中文</a> &nbsp;|&nbsp;
-  <a href="#-support"><img src="https://img.shields.io/badge/☕-Donate-orange?style=flat-square" /></a>
-  <a href="#打赏"><img src="https://img.shields.io/badge/💰-打赏-red?style=flat-square" /></a>
-</p>
-
----
 
 # 中文说明
 
